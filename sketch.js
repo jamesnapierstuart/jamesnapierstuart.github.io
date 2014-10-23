@@ -51,7 +51,7 @@ function draw() {
 
 	t+=0.01
 
-	ellipse(20, 20, 20, 20)
+	ellipse(20, 200, 20, 20)
 }
 
 
