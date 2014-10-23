@@ -50,8 +50,6 @@ function draw() {
 	endShape(CLOSE) // Closes any gaps
 
 	t+=0.01
-
-	ellipse(20, 100, 20, 20)
 }
 
 
