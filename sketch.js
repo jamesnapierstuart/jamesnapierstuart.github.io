@@ -27,12 +27,13 @@ function draw() {
 	}
 
 
-	translate(width/2, height/2)
+	
 	// stroke(255)	
 	strokeWeight(2)
 	stroke(255, 0, 255, 100)
 	noFill()
 	beginShape()
+	translate(width/2, height/2)
 	for(i = 0; i < TWO_PI; i+=0.01) {
 		// r = random(100, 105) // This makes a random movement 
 		// j = i+20
@@ -63,7 +64,10 @@ function doOnOrientationChange()
     switch(window.orientation) 
     {  
       case -90:
+      // Need to change the code here translate it????
       case 90:
+      // Translate the code back again????
+      // Or just have the screen locked down?
         break; 
       default:
         break; 
