@@ -11,14 +11,14 @@ function setup() {
 	createCanvas(window.innerWidth, window.innerHeight)
 	background(0)
 	setFrameRate(8)
+	song.loop()
 }
 
 function draw() {
 	// background(0) // Take this off if want to take a serious of pictures of the events
 
-	var speed = map(mouseY, 0.1, height, 0.1, 20)
+	speed = map(mouseY, 0.1, height, 0.01, 20)
 	song.rate(speed)
-  	song.play()
 
 		rate++
 	
