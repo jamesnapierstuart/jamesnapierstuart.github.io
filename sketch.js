@@ -20,8 +20,7 @@ function draw() {
 	// speed = map(mouseY, 0.1, height, 0.01, 4)
 	// song.rate(speed)
 
-		rate++
-	
+	rate++
 	if(rate > touchY) {
 		background(0)
 		rate = 0
@@ -29,7 +28,6 @@ function draw() {
 
 
 	translate(width/2, height/2)
-
 	// stroke(255)	
 	strokeWeight(2)
 	stroke(255, 0, 255, 100)
@@ -58,6 +56,16 @@ function mousePressed() {
 	background(0)
 }
 
-// With a normal circle the radius is always the same.
+function doOnOrientationChange()
+  {
+    switch(window.orientation) 
+    {  
+      case -90:
+      case 90:
+        break; 
+      default:
+        break; 
+    }
+  }
 
-// With a squigly sine moving wave the raidus changes as we go through the points
+  window.addEventListener('orientationchange', doOnOrientationChange);
