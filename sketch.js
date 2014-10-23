@@ -59,23 +59,28 @@ function mousePressed() {
 	background(0)
 }
 
-function doOnOrientationChange()
-  {
-    switch(window.orientation) 
-    {  
-      case -90:
-      // Need to change the code here translate it????
-      background(0)
-      translate(window.width/2, window.height/2)
-      case 90:
-      // Translate the code back again????
-      background(0)
-      translate(window.width/2, window.height/2)
-      // Or just have the screen locked down?
-        break; 
-      default:
-        break; 
-    }
-  }
+// function doOnOrientationChange()
+//   {
+//     switch(window.orientation) 
+//     {  
+//       case -90:
+//       // Need to change the code here translate it????
+//       background(0)
+//       translate(window.width/2, window.height/2)
+//       case 90:
+//       // Translate the code back again????
+//       background(0)
+//       translate(window.width/2, window.height/2)
+//       // Or just have the screen locked down?
+//         break; 
+//       default:
+//         break; 
+//     }
+//   }
 
-  window.addEventListener('orientationchange', doOnOrientationChange);
+//   window.addEventListener('orientationchange', doOnOrientationChange);
+
+
+  function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
