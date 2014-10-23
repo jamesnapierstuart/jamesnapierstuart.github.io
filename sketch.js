@@ -65,8 +65,10 @@ function doOnOrientationChange()
     {  
       case -90:
       // Need to change the code here translate it????
+      translate(width/2, height/2)
       case 90:
       // Translate the code back again????
+      translate(width/2, height/2)
       // Or just have the screen locked down?
         break; 
       default:
