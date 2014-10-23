@@ -3,7 +3,7 @@ var rate = 0
 var song
 
 function preload() {
-	song = loadSound('snare.wav');
+	song = loadSound('island.wav');
 }
 
 
