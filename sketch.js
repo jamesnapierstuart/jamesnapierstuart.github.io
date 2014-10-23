@@ -11,7 +11,7 @@ function setup() {
 	createCanvas(window.innerWidth, window.innerHeight)
 	background(0)
 	setFrameRate(8)
-	// song.loop()
+	song.loop()
 }
 
 function draw() {
