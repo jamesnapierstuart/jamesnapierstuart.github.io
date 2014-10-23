@@ -51,7 +51,7 @@ function draw() {
 
 	t+=0.01
 
-	ellipse(200, 100, 20, 20)
+	ellipse(20, 100, 20, 20)
 }
 
 
@@ -82,5 +82,5 @@ function mousePressed() {
 
 
   function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(window.innerWidth, window.innerHeight);
 }
