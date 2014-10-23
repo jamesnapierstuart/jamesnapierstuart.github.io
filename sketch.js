@@ -51,7 +51,7 @@ function draw() {
 
 	t+=0.01
 
-	ellipse(20, 400, 20, 20)
+	ellipse(20, 100, 20, 20)
 }
 
 
@@ -65,10 +65,12 @@ function doOnOrientationChange()
     {  
       case -90:
       // Need to change the code here translate it????
-      translate(width/2, height/2)
+      background(0)
+      translate(window.width/2, window.height/2)
       case 90:
       // Translate the code back again????
-      translate(width/2, height/2)
+      background(0)
+      translate(window.width/2, window.height/2)
       // Or just have the screen locked down?
         break; 
       default:
