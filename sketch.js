@@ -17,7 +17,7 @@ function setup() {
 function draw() {
 	// background(0) // Take this off if want to take a serious of pictures of the events
 
-	speed = map(mouseY, 0.1, height, 0.01, 20)
+	speed = map(mouseY, 0.1, height, 0.01, 4)
 	song.rate(speed)
 
 		rate++
