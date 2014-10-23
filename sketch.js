@@ -81,6 +81,6 @@ function mousePressed() {
 //   window.addEventListener('orientationchange', doOnOrientationChange);
 
 
-  function windowResized() {
-  resizeCanvas(window.innerWidth, window.innerHeight);
-}
+//   function windowResized() {
+//   resizeCanvas(window.innerWidth, window.innerHeight);
+// }
