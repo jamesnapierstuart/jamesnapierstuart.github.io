@@ -2,7 +2,7 @@ var t = 0
 var rate = 0
 
 function setup() {
-	createCanvas(window.innerWidth, displayHeight)
+	createCanvas(window.innerWidth, window.innerHeight)
 	background(0)
 	setFrameRate(8)
 }
