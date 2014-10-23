@@ -1,5 +1,11 @@
 var t = 0
 var rate = 0
+var song
+
+function preload() {
+	song = loadSound('snare.wav');
+}
+
 
 function setup() {
 	createCanvas(window.innerWidth, window.innerHeight)
@@ -9,6 +15,10 @@ function setup() {
 
 function draw() {
 	// background(0) // Take this off if want to take a serious of pictures of the events
+
+	var speed = map(mouseY, 0.1, height, 0.1, 20)
+	song.rate(speed)
+  	song.play()
 
 		rate++
 	
