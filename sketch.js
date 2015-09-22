@@ -3,7 +3,7 @@ var t = 0
 function setup() {
 	createCanvas(windowWidth, windowHeight)
 	background(0)
-	// setFrameRate(8)
+	setFrameRate(8)
 	print("Window Width and Height")
 	print(windowWidth, windowHeight)
 }
