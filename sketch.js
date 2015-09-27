@@ -26,7 +26,7 @@ function setup() {
  	menuButton()
 
   // Mobile device window size
-  if (windowWidth < 768) {
+  if (windowWidth < 1000) {
     // Create Menu bar
     imageMode(CENTER)
     image(menuImg, width-50, 50)
