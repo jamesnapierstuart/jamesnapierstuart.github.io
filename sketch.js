@@ -1,58 +1,127 @@
-var t = 0
+/*
+24/09/2015 
+Jamie Stuart
+p5 Experiments
+Drop down box 02
+*/
+
+var heightBox = 0
+var clicked = false
+var firstClick = false
+var menuRate = 30
+var menuLimit
+var menuImg
+
+function preload() {  // preload() runs once
+	menuImg = loadImage('menuIcon.png')
+}
+
 
 function setup() {
-	createCanvas(windowWidth, windowHeight)
-	background(0)
-	setFrameRate(8)
-	print("Window Width and Height")
-	print(windowWidth, windowHeight)
+ 	createCanvas(windowWidth, windowHeight) // Create canvas
+ 	// menuLimit = windowHeight/3.3
+ 	menuLimit = 288
+ 	background(0)
+ 	// Create buttons
+ 	menuButton()
+
+  // Mobile device window size
+  if (windowWidth < 768) {
+    // Create Menu bar
+    imageMode(CENTER)
+    image(menuImg, width-50, 50)
+    // Hide menu pages
+    // hideMenuPages()
+    // show menu icon button
+    showMenuIcon()
+}
 }
 
-function draw() {
-	background(0, 0, 0, 40)
-	// drawFont()
-	drawSineCircle()
-}
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight)
-  print("The window is being resized")
-  background(0)
-  drawSineCircle()
-  // drawFont()
-}
 
-function drawSineCircle() {
-	strokeWeight(2)
-	stroke(0, 0, 255, 100)
-	noFill()
-	push();
-	translate(width/2, height/2)
-	beginShape()
-	for(i = 0; i < TWO_PI; i+=0.01) {
-		u = map(noise(t), 0, 1, 0, 20)
-		r = map(sin(i*u), 0, 1, windowWidth/8.4, windowWidth/8.15)	 // now we map the value of each point (which is -1 to 1 from the sin function and then map 50 100) The value won't be going up fast enough so multiply by 5
-		x = r*cos(i)
-		y = r*sin(i)
-		vertex(x, y)
-
-		// original values
-		// windowWidth/8.4, windowWidth/8.15
-
-		// now change mouseX to something sensible
+function animate(r, g, b) {
+	if (heightBox <= menuLimit) {
+		noStroke()
+		fill(r, g, b)
+		rect(0, 0, width, heightBox)
+		background(0)
+		noStroke()
+		fill(r, g, b)
+		rect(0, 0, width, heightBox)
+		heightBox = heightBox+menuRate
+		// Draw menu icon 
+		imageMode(CENTER)
+    	image(menuImg, width-50, 50)
 	}
-	endShape(CLOSE) // Closes any gaps
-	pop();
-	t+=0.01
+ 	// Catch, so since menurate is not always modulous to the height/2
+ 	// We say as soon as you go over it, go to height/2 
+ 	else if (heightBox >= menuLimit) {
+ 		noStroke()
+ 		fill(r, g, b)
+ 		rect(0, 0, width, menuLimit)
+ 		// Draw menu icon
+		imageMode(CENTER)
+    	image(menuImg, width-50, 50)
+ 	}
+
+      // Mobile device window size
+  if (windowWidth > 768) {
+    background(0)
+    hideMenuIcon()
+}
+ }
+
+ function animateBack(r, g, b) {
+ 	if(heightBox != 0) {
+ 		noStroke()
+ 		fill(r, g, b)
+ 		rect(0, 0, width, heightBox)
+ 		background(0)
+ 		noStroke()
+ 		fill(r, g, b)
+ 		rect(0, 0, width, heightBox)
+ 		heightBox = heightBox-menuRate
+ 		// Draw menu icon 
+		imageMode(CENTER)
+    	image(menuImg, width-50, 50)
+ 	}
+ 	else if (heightBox <= 0) {
+ 		background(0)
+ 		// Draw menu icon 
+		imageMode(CENTER)
+    	image(menuImg, width-50, 50)
+ 	}
+          // Mobile device window size
+  if (windowWidth > 768) {
+    background(0)
+    hideMenuIcon()
+}
+ }
+
+ function draw()  {
+ 	// First click bool will be replaced by menu icon click
+ 	if(firstClick) {
+ 		if(clicked) {
+ 			animate(100, 100, 100)
+ 		} 
+ 		else {	
+ 			animateBack(100, 100, 100)
+ 		}
+ 	}
+ }
+
+ function windowResized() {
+ 	resizeCanvas(windowWidth, windowHeight)
+ 	if (windowWidth < 768) {
+    // Create Menu bar
+    imageMode(CENTER)
+    image(menuImg, width-50, 50)
+    // hide menu pages
+    // hideMenuPages()
+    // show the menu icon button
+    showMenuIcon()
+    updateMenuIconPosition()
+}
 }
 
-function drawFont(){
-	s = "Yanaphauna"
-	noStroke()
-	fill(100)
-	textSize(24)
-	textAlign(CENTER)
-	textStyle(NORMAL)
-	textFont("Helvetica")
-	text(s, windowWidth/2, windowHeight-windowHeight/8, 100, 100) // Text wraps within text box
-}
+
