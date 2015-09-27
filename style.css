@@ -24,3 +24,12 @@ body {
 	outline: none;
 	color: white;
 }
+
+#menuImg {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	width: 30px;
+	height: 30px;
+	cursor:hand;
+}

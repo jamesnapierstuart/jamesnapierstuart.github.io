@@ -8,18 +8,17 @@ $(document).ready(function(){
 	$("#b1").click(function(){
 		changeMe();
 	});
+	$("#menuImg").click(function(){
+		changeMe();
+	});
 });
 
 function changeMe() {
 	if (menuDown) {
-		$('#foo').slideUp(200);
+		$('#foo').slideUp(100);
 		menuDown = false;
 	} else {
-		$('#foo').slideDown(200);
+		$('#foo').slideDown(100);
 		menuDown = true;
 	}
 };
-
-// Copy the code so it slides up and down but just bigger
-
-// want to overlay it
