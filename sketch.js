@@ -8,7 +8,7 @@ Drop down box 02
 var heightBox = 0
 var clicked = false
 var firstClick = false
-var menuRate = 30
+var menuRate = 100
 var menuLimit
 var menuImg
 
