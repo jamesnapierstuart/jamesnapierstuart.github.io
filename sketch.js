@@ -28,7 +28,7 @@ function setup() {
  	menuButton()
 
   // Mobile device window size
-  if (windowWidth < 1000) {
+  if (windowWidth < 1024) {
     // Create Menu bar
     imageMode(CENTER)
     image(menuImg, width-50, 50)
@@ -67,7 +67,7 @@ function animate(r, g, b) {
  	}
 
       // Mobile device window size
-  if (windowWidth > 1000) {
+  if (windowWidth > 1024) {
     background(0)
     hideMenuIcon()
 }
@@ -94,7 +94,7 @@ function animate(r, g, b) {
     	image(menuImg, width-50, 50)
  	}
           // Mobile device window size
-  if (windowWidth > 1000) {
+  if (windowWidth > 1024) {
     background(0)
     hideMenuIcon()
 }
@@ -114,7 +114,7 @@ function animate(r, g, b) {
 
  function windowResized() {
  	resizeCanvas(windowWidth, windowHeight)
- 	if (windowWidth < 1000) {
+ 	if (windowWidth < 1024) {
     // Create Menu bar
     imageMode(CENTER)
     image(menuImg, width-50, 50)
