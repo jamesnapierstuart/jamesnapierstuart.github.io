@@ -5,10 +5,12 @@ p5 Experiments
 Drop down box 02
 */
 
+// Need to change the screen size to one I know is best for all mobile/tablet devices
+
 var heightBox = 0
 var clicked = false
 var firstClick = false
-var menuRate = 100
+var menuRate = 30
 var menuLimit
 var menuImg
 
