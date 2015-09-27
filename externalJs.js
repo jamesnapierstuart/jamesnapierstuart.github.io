@@ -2,23 +2,22 @@ var menuDown = false;
 
 // Load document then process js below
 $(document).ready(function(){
+	// Hello World Test
 	console.log('hello world!');
-	// Call a sketch function when click a DOM object
-	$("#foo").hide();
-	$("#b1").click(function(){
-		changeMe();
-	});
+	// Hide menu on load up
+	$("#dropDownMenu").hide();
+	// Call dropMenu() function to display menu
 	$("#menuImg").click(function(){
-		changeMe();
+		dropMenu();
 	});
 });
 
-function changeMe() {
+function dropMenu() {
 	if (menuDown) {
-		$('#foo').slideUp(100);
+		$('#dropDownMenu').slideUp(100);
 		menuDown = false;
 	} else {
-		$('#foo').slideDown(100);
+		$('#dropDownMenu').slideDown(100);
 		menuDown = true;
 	}
 };
