@@ -65,7 +65,7 @@ function animate(r, g, b) {
  	}
 
       // Mobile device window size
-  if (windowWidth > 768) {
+  if (windowWidth > 1000) {
     background(0)
     hideMenuIcon()
 }
@@ -92,7 +92,7 @@ function animate(r, g, b) {
     	image(menuImg, width-50, 50)
  	}
           // Mobile device window size
-  if (windowWidth > 768) {
+  if (windowWidth > 1000) {
     background(0)
     hideMenuIcon()
 }
@@ -112,7 +112,7 @@ function animate(r, g, b) {
 
  function windowResized() {
  	resizeCanvas(windowWidth, windowHeight)
- 	if (windowWidth < 768) {
+ 	if (windowWidth < 1000) {
     // Create Menu bar
     imageMode(CENTER)
     image(menuImg, width-50, 50)
