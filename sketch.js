@@ -37,12 +37,12 @@ var sketchOne = function(p) {
 		p.x = p.x + p.random(-10, 10)
 		p.y = p.y + p.random(-10, 10)
 		
-		textSize(32);
-		text("word", 10, 30);
-		fill(0, 102, 153);
-		text("word", 10, 60);
-		fill(0, 102, 153, 51);
-		text("word", 10, 90);
+		p.textSize(32);
+		p.text("word", 10, 30);
+		p.fill(0, 102, 153);
+		p.text("word", 10, 60);
+		p.fill(0, 102, 153, 51);
+		p.text("word", 10, 90);
 	}
 
 	p.windowResized = function() {
