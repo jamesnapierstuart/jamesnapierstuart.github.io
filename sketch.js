@@ -112,6 +112,7 @@ function doOnOrientationChange()
     {  
       case -90:
       case 90:
+      case 180:
       for(var i = 0; i < 5; i++)
 	{
 		sketches[i].orientationchange()
@@ -136,6 +137,7 @@ function doOnOrientationChange()
 	}
         break; 
         case 0:
+        case 270:
         for(var i = 0; i < 5; i++)
 	{
 
