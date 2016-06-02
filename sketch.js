@@ -5,6 +5,12 @@
 // BUT it create a whole bunch of problems where the sketches weren't big enough
 
 var sketchOne = function(p) {
+
+	var previousWidth = p.displayHeight
+	var previousHeight = p.displayWidth
+
+	var change = false
+
 	p.x = p.displayWidth / 2
 	p.y = p.displayHeight / 2
 
@@ -33,7 +39,22 @@ var sketchOne = function(p) {
 	}
 
 	p.windowResized = function() {
-  		p.resizeCanvas(p.displayHeight, p.displayWidth) // this is nasty
+
+
+		if(!change)
+		{
+			console.log('size changed')
+			p.resizeCanvas(p.displayHeight, p.displayWidth) // this is nasty
+		}
+		else
+		{
+			console.log('size changed')
+			p.resizeCanvas(p.displayWidth, p.displayHeight)
+		}
+
+		 change = !change
+		
+  		
   		p.background(p.bgColor)
   		p.x = p.width/2
 		p.y = p.height/2
