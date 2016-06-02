@@ -1,3 +1,9 @@
+html {
+	-webkit-overflow-scrolling: touch;
+}
+
 body {
 	background-color: rgb(0, 0, 0);
+	height: 100%; overflow: auto; margin: 0;
+	-webkit-overflow-scrolling: touch;
 }
