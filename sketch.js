@@ -33,7 +33,7 @@ var sketchOne = function(p) {
 	}
 
 	p.windowResized = function() {
-  		p.resizeCanvas(p.displayWidth, p.displayHeight)
+  		p.resizeCanvas(p.displayHeight, p.displayWidth)
   		p.background(p.bgColor)
   		p.x = p.width/2
 		p.y = p.height/2
