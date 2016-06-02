@@ -53,10 +53,10 @@ var sketchOne = function(p) {
 		// else if mobile, we will have our own function for orientation
 		console.log(isMobile)
 
-
-  		p.background(p.bgColor)
-  		p.x = p.width/2
-		p.y = p.height/2
+		
+  // 		p.background(p.bgColor)
+  // 		p.x = p.width/2
+		// p.y = p.height/2
 	}
 
 	p.orientationchange = function() {
