@@ -8,16 +8,8 @@ var sketchOne = function(p) {
 
 
 	// Check if mobile:
-	if(isMobile)
-	{
-		p.widthSize = displayWidth
-		p.heightSize = displayHeight
-	}
-	else
-	{
-		p.widthSize = window.innerWidth
-		p.heightSize = window.innerHeight
-	}
+	p.widthSize = window.innerWidth
+	p.heightSize = window.innerHeight
 
 	p.x = window.innerWidth / 2
 	p.y = window.innerHeight / 2
