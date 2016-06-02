@@ -15,6 +15,7 @@ var sketchOne = function(p) {
 
 	p.widthSize = window.innerWidth
 	p.heightSize = window.innerHeight
+	// 
 
 	// set random walker location
 	p.x = p.widthSize / 2
