@@ -79,6 +79,16 @@ var sketches = []
 for(var i = 0; i < 5; i++)
 {
 	sketches[i] = new p5(sketchOne)
+	if(i === 0)
+	{
+		sketches[i].bgColor = sketches[i].color(0)
+		sketches[i].background(sketches[i].bgColor)
+	}
+	if(i === 4)
+	{
+		sketches[i].bgColor = sketches[i].color(0)
+		sketches[i].background(sketches[i].bgColor)	
+	}
 }
 
 function resetBackground() {
