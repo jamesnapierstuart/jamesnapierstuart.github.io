@@ -1,6 +1,6 @@
 var sketchOne = function(p) {
-	p.x = p.windowWidth / 2
-	p.y = p.windowHeight / 2
+	p.x = p.displayWidth / 2
+	p.y = p.displayHeight / 2
 
 	p.bgColor = p.random(200)
 
@@ -9,8 +9,8 @@ var sketchOne = function(p) {
 	p.b = 0
 	p.a = 25
 
-	p.widthSize = p.windowWidth
-	p.heightSize = p.windowHeight
+	p.widthSize = p.displayWidth
+	p.heightSize = p.displayHeight
 
 	p.setup = function() {
 		p.createCanvas(p.widthSize, p.heightSize)
@@ -27,7 +27,7 @@ var sketchOne = function(p) {
 	}
 
 	p.windowResized = function() {
-  		p.resizeCanvas(p.windowWidth, p.windowHeight)
+  		p.resizeCanvas(p.displayWidth, p.displayHeight)
   		p.background(p.bgColor)
   		p.x = p.width/2
 		p.y = p.height/2
