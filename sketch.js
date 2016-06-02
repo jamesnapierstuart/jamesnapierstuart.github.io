@@ -1,3 +1,9 @@
+// So this does strnage stuff on IOS
+
+// It almost solves the problem of resizing with the IOS thing that comes up,
+
+// BUT it create a whole bunch of problems where the sketches weren't big enough
+
 var sketchOne = function(p) {
 	p.x = p.displayWidth / 2
 	p.y = p.displayHeight / 2
