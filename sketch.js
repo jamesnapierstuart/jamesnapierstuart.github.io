@@ -112,27 +112,46 @@ function doOnOrientationChange()
     {  
       case -90:
       case 90:
-      for(var i = 0; i < 20; i++)
+      for(var i = 0; i < 5; i++)
 	{
 		sketches[i].orientationchange()
+
+		// set first and last to black, all in between increase brightness
+		if((i === 0) || (i === 4))
+		{
+		sketches[i].bgColor = 0;
+			}
+		else
+		{
+			sketches[i].bgColor = 51*i;
+		}
+
+
 		sketches[i].x = sketches[i].width/2
 		sketches[i].y = sketches[i].height/2
 		sketches[i].r = sketches[i].random(255)
 		sketches[i].g = sketches[i].random(255)
-		sketches[i].bgColor = sketches[i].random(100)
-		sketches[i].background(sketches[i].bgColor)
+		// sketches[i].bgColor = sketches[i].random(100)
+		// sketches[i].background(sketches[i].bgColor)
 	}
         break; 
         case 0:
-        for(var i = 0; i < 20; i++)
+        for(var i = 0; i < 5; i++)
 	{
-		sketches[i].orientationchange()
+		if((i === 0) || (i === 4))
+		{
+		sketches[i].bgColor = 0;
+			}
+		else
+		{
+			sketches[i].bgColor = 51*i;
+		}
+
+
 		sketches[i].x = sketches[i].width/2
 		sketches[i].y = sketches[i].height/2
 		sketches[i].r = sketches[i].random(255)
 		sketches[i].g = sketches[i].random(255)
-		sketches[i].bgColor = sketches[i].random(100)
-		sketches[i].background(sketches[i].bgColor)
 	}
       default:
         break; 
