@@ -47,13 +47,13 @@ var sketchOne = function(p) {
 		{
 			p.resizeCanvas(window.innerWidth, window.innerHeight)	
   			p.background(p.bgColor)
-  			p.x = p.widthSize/2
-			p.y = p.heightSize/2
+  			p.x = p.width/2
+			p.y = p.height/2
 		}
 		// else if mobile, we will have our own function for orientation
 		console.log(isMobile)
 
-		
+
   // 		p.background(p.bgColor)
   // 		p.x = p.width/2
 		// p.y = p.height/2
