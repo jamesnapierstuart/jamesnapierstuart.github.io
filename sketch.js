@@ -118,8 +118,6 @@ function doOnOrientationChange()
 			// set sketch variables
 			sketches[i].x = sketches[i].width/2
 			sketches[i].y = sketches[i].height/2
-			sketches[i].r = sketches[i].random(255)
-			sketches[i].g = sketches[i].random(255)
 		}
 
 		break;
