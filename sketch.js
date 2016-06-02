@@ -138,6 +138,10 @@ function doOnOrientationChange()
         case 0:
         for(var i = 0; i < 5; i++)
 	{
+
+		// make sure we call orientation change when flipping back to vertical
+		sketches[i].orientationchange()
+
 		if((i === 0) || (i === 4))
 		{
 		sketches[i].bgColor = 0;
