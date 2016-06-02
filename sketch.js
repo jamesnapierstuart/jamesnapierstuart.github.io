@@ -93,7 +93,9 @@ function resetBackground() {
 	}
 }
 
-setInterval(resetBackground, 3000)
+// Uncomment this if we want an interval function to be called
+// setInterval(resetBackground, 3000)
+
 
 
 
